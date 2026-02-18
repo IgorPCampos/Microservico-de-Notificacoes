@@ -3,6 +3,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import { PrometheusModule } from '@willsoto/nestjs-prometheus';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -25,6 +26,6 @@ import { PrometheusModule } from '@willsoto/nestjs-prometheus';
     ]),
   ],
   controllers: [AppController],
-  providers: [],
+  providers: [AppService],
 })
 export class AppModule {}
