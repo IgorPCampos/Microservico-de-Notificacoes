@@ -6,8 +6,8 @@ import { SendEmailDto } from '../dtos/send-email.dto';
 
 describe('NotificationController', () => {
   let controller: NotificationController;
-  let emailServiceMock: any;
-  let userValidatorMock: any;
+  let emailServiceMock: Record<string, jest.Mock>;
+  let userValidatorMock: Record<string, jest.Mock>;
 
   beforeEach(async () => {
     emailServiceMock = { send: jest.fn() };
